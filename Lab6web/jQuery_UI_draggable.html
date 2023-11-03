@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+    #draggble {
+        width: 125px;
+        height: 125px;
+        background-color: #FFF;
+        text-align: center;
+        padding: 1px 5px;
+        border: 1px solid #AAA;
+        margin:auto;
+        float: left;
+    }
+    #containment-wrapper {
+        width: 95px;
+        height: 200px;
+        border: 1px solid #4E4E4E;
+        padding: 10px;
+    }
+    </style>
+    <script>
+    $(function() {
+        $("#draggable").draggable({
+            containment: "#containment-wrapper",
+            scroll: false
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="containment-wrapper">
+        <div id="draggable">
+            <p>I'm contained within the box</p>
+        </div>
+    </div>
+</body>
+</html>
